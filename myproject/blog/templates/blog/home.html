@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1> {{ title }}</h1>
+
+{% for post in person %}
+<p>{{ post.name }}</p>
+<p>{{ post.age }}</p>
+<p>Hobbies:</p>
+<p> {% for hobby in post.hobbies %}
+    {{ hobby }}
+    {% endfor %}</p>
+
+{% endfor %}
+{% endblock %}
+
+
+
